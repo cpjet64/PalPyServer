@@ -1,24 +1,48 @@
-# PalPyServer
-Python based server manager for Palworld
+# Python-Based Server Manager for Palworld
 
-so this program will handle everything basically. the process is as follows:
-download the program (fully open source) from my github
-run the program
-the program will initially ask you if you want to manage a already installed server or setup a new one
-if you select manage a server it will ask where the root install directory is for the gameserver and then upon locating the server exe it will change to the overall management screen (explained later) and all of your server settings except for launch parameters will be imported automatically
-OR
-if you select setup a new one the program will ask where you want the program installed to or ask if you want to use the default location of C:\Gameservers
-it will create the directory structure
-it will download steamcmd from valve
-it will run steamcmd to install and validate the palworld server
-it will open a configuration window that is prefilled with default settings allowing people to configure them as needed (change ports or ips etc) (it will also prefill your local IP as well as your public IP)
-it will then ask if you want it to automatically apply the firewall rules based on the ports you selected in the previous section
-it will then ask you if you want to apply optimal power plan settings such as disabling hard drive shutdown when idle to help avoid server file corruption
-it will then open a initial server setup screen where you fill out your server info and configs such as the name and passwords and change the palworldsettings.ini values and can easily change the difficulty presets
-it will then prompt if you want to enable backups for your server and if so open a config window for setting how often backups occur, how many backups to keep
-it will then prompt if you want to enable auto restarts for your server and if so open a config window for setting how often
-it will then take your local computers gateway ip and try to read the webpage login page to determine what manufacturer made it and direct you to the proper port forwarding guide for the brand
-it will then change to the overall management screen that shows cpu, ram, hdd usage data and start restart stop buttons, there is also a autorestart toggle, it will also include a toggle box for launching the server as a community server or as a private server
-on the overall management screen there is also a RCON console that will connect to the configured server
-so far i have all of the individual parts working properly i just need to iron out a few bugs and integrate them all into one program
-also almost forgot to add the program will auto elevate to administrator if it wasnt started as admin so it has the ability to do everything listed like firewall and power plan
+<!-- Brief introduction -->
+This document outlines the functionality and usage of a Python-based server manager designed for the Palworld game. The server manager is a comprehensive tool aimed at simplifying server setup, management, and maintenance for Palworld.
+
+## Key Features:
+
+<!-- List of major features -->
+1. **Open Source and Easy to Download:** The program is fully open source and can be downloaded from the GitHub repository.
+
+2. **Initial Setup Choices:**
+   <!-- Options for initial setup -->
+   - **Manage Existing Server:** If you have a server already installed, the program will ask for the root installation directory. Upon locating the server executable, it switches to the management interface (detailed below), importing all server settings except for launch parameters.
+   - **Set Up New Server:** For new installations, the program offers a default installation location (C:\Gameservers) or allows you to choose a custom directory. The setup process includes:
+     - Creating the directory structure.
+     - Downloading and running SteamCMD from Valve to install and validate the Palworld server.
+     - Opening a configuration window with default settings, including pre-filled local and public IP addresses, enabling customization of settings like ports and IPs.
+     - Options to automatically apply firewall rules based on selected ports.
+     - Suggesting optimal power plan settings to prevent server file corruption, such as disabling hard drive shutdown when idle.
+     - A setup screen for initial server configurations (server name, passwords, difficulty settings, editing `palworldsettings.ini`).
+
+3. **Additional Configuration Options:**
+   <!-- Additional configuration details -->
+   - **Backups:** Option to enable server backups, with settings for frequency and retention.
+   - **Auto Restarts:** Ability to set up automatic server restarts and configure their frequency.
+   - **Network Setup Assistance:** The program can identify your router’s manufacturer and guide you through port forwarding based on the brand.
+
+4. **Overall Management Screen:**
+   <!-- Description of the management screen -->
+   - Displays CPU, RAM, and HDD usage.
+   - Features start, restart, and stop buttons for server management.
+   - Includes toggles for auto-restart, and options to launch the server as either a community or a private server.
+   - Contains an RCON console for direct server interaction.
+
+5. **Program Execution and Administration:**
+   <!-- Information on program execution -->
+   - The program will automatically request administrative rights if not started with them, ensuring full functionality for tasks like firewall and power plan adjustments.
+
+## Current Status:
+
+<!-- Update on the current development status -->
+- The program is currently under heavy development. As such, it is in a preliminary phase, and users should expect that not all features may work correctly at this time.
+- All individual components of the program are operational, but integration and bug fixing are ongoing.
+
+---
+
+<!-- Conclusion and future outlook -->
+This server manager aims to streamline the process of running a Palworld server, making it accessible and manageable for users with varying levels of technical expertise. Users are encouraged to keep this in mind and stay updated with future developments and improvements.
