@@ -2,31 +2,31 @@ descriptions = [
     ("Difficulty", "Alters the overall challenge level of the game."),
     (
         "DayTimeSpeedRate",
-        "Adjusts the pace of in-game time progression during daylight hours.",
+        "Modifies the speed of in-game time during daytime.",
     ),
     ("NightTimeSpeedRate", "Modifies the speed of in-game time during nighttime."),
     ("ExpRate", "Alters the rate at which both players and creatures gain experience."),
     (
         "PalCaptureRate",
-        "Adjusts the likelihood of successfully capturing Pal creatures.",
+        "Adjusts the likelihood of successfully capturing Pals.",
     ),
     (
         "PalSpawnNumRate",
-        "Controls the frequency at which Pal creatures appear in the game world.",
+        "Controls the frequency at which Pals appear in the game world.",
     ),
-    ("PalDamageRateAttack", "Fine-tunes the damage dealt by Pal creatures in combat."),
+    ("PalDamageRateAttack", "Fine tunes the damage dealt by Pals in combat."),
     (
         "PalDamageRateDefense",
-        "Fine-tunes the damage received by Pal creatures in combat.",
+        "Fine tunes the damage received by Pals in combat.",
     ),
-    ("PlayerDamageRateAttack", "Fine-tunes the damage dealt by players in combat."),
-    ("PlayerDamageRateDefense", "Fine-tunes the damage received by players in combat."),
+    ("PlayerDamageRateAttack", "Fine tunes the damage dealt by players in combat."),
+    ("PlayerDamageRateDefense", "Fine tunes the damage received by players in combat."),
     (
-        "PlayerStomachDecreaseRate",
+        "PlayerStomachDecreaceRate",
         "Adjusts the rate at which the player’s stomach depletes.",
     ),
     (
-        "PlayerStaminaDecreaseRate",
+        "PlayerStaminaDecreaceRate",
         "Adjusts the rate at which the player’s stamina depletes.",
     ),
     (
@@ -38,20 +38,20 @@ descriptions = [
         "Modifies the rate of automatic health regeneration for players during sleep.",
     ),
     (
-        "PalStomachDecreaseRate",
-        "Adjusts the rate at which Pal creature stomachs deplete.",
+        "PalStomachDecreaceRate",
+        "Adjusts the rate at which Pals get hungry.",
     ),
     (
-        "PalStaminaDecreaseRate",
-        "Adjusts the rate at which Pal creature stamina depletes.",
+        "PalStaminaDecreaceRate",
+        "Adjusts the rate at which Pals stamina depletes.",
     ),
     (
         "PalAutoHPRegeneRate",
-        "Modifies the rate of automatic health regeneration for Pal creatures.",
+        "Modifies the rate of automatic health regeneration for Pals.",
     ),
     (
         "PalAutoHpRegeneRateInSleep",
-        "Modifies the rate of automatic health regeneration for Pal creatures during sleep.",
+        "Modifies the rate of automatic health regeneration for Pals during sleep.",
     ),
     (
         "BuildObjectDamageRate",
@@ -76,7 +76,7 @@ descriptions = [
     ),
     (
         "DeathPenalty",
-        "Specifies the penalty incurred by players upon death (e.g., All, None).",
+        "Specifies the penalty incurred by players upon death. Available options are None = Nothing dropped, Item = Drops only items in your inventory, ItemAndEquipment = Drops Items in your inventory and your equipment, All = Drops everything including equipped Pals",
     ),
     (
         "bEnablePlayerToPlayerDamage",
@@ -112,7 +112,7 @@ descriptions = [
     ),
     (
         "BaseCampMaxNum",
-        "Sets the maximum number of base camps that players can construct.",
+        "Sets the maximum number of base camps that players can construct. This setting is global across the server, it is not specific to individual guilds.",
     ),
     (
         "BaseCampWorkerMaxNum",
@@ -161,21 +161,39 @@ descriptions = [
     ),
     (
         "CoopPlayerMaxNum",
-        "Sets the maximum number of cooperative players allowed in a session.",
+        "Sets the maximum number of cooperative players allowed in a session. This setting does not appear to have any effect in dedicated servers and is safe to leave at its default.",
     ),
-    ("ServerPlayerMaxNum", "Sets the maximum number of players allowed on the server."),
+    (
+        "ServerPlayerMaxNum",
+        "Sets the maximum number of players allowed on the server. Make sure your server machine has enough ram. Expect to have about 1.5GB of RAM usage per connected player.",
+    ),
     ("ServerName", "Sets the name of the Palworld server."),
     ("ServerDescription", "Provides a description for the Palworld server."),
     ("AdminPassword", "Sets the password for server administration."),
-    ("ServerPassword", "Sets the password for joining the Palworld server."),
-    ("PublicPort", "Sets the public port for the Palworld server."),
-    ("PublicIP", "Sets the public IP address for the Palworld server."),
+    (
+        "ServerPassword",
+        "Sets the password for joining the Palworld server. Leave this setting blank due to a bug as of Palworld version 0.1.2.0.",
+    ),
+    (
+        "PublicPort",
+        "Sets the public port for the Palworld server. This setting is required to have your server shown in the Community Servers tab.",
+    ),
+    (
+        "PublicIP",
+        "Sets the public IP address for the Palworld server. This setting is required to have your server shown in the Community Servers tab.",
+    ),
     (
         "RCONEnabled",
         "Enables or disables Remote Console (RCON) for server administration.",
     ),
     ("RCONPort", "Sets the port for Remote Console (RCON) communication."),
-    ("Region", "Sets the region for the Palworld server."),
+    (
+        "Region",
+        "Sets the region for the Palworld server. Options appear to be NA, SA, China, Asia, EU, JP.",
+    ),
     ("bUseAuth", "Enables or disables server authentication."),
-    ("BanListURL", "Sets the URL for the server’s ban list."),
+    (
+        "BanListURL",
+        "Sets the URL for the server’s ban list. The default is the Global BanList",
+    ),
 ]

@@ -1,10 +1,8 @@
 import unittest
-from unittest.mock import patch, mock_open
+from unittest.mock import patch
 import os
-from pathlib import Path
-import ini_parser
-from difficultypresets import casual_settings
-from gui import (
+from current.difficultypresets import casual_settings
+from current.gui import (
     locate_game_server,
     load_settings_from_ini,
     save_settings_to_ini,
